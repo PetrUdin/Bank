@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit</title>
+  <link href="assets/fonts/roboto/stylesheet.css" rel="stylesheet" type="text/html" />
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="wrap-calc">
+    <div class="calc">
+      <div class="calc__col-1">
+        <h2 class="calc__title">Расчёт доходности по вкладу</h2>
+        <div class="calc__sum">
+          <p class="calc__sum-title">Сумма вклада</p>
+          <input type="text" class="calc__input" value="10000" id="sum">
+          <input type="range" class="calc__input-range" step="10000" min="10000" max="10000000" value="10" id="sum-range">
+
+        </div>
+        <div class="calc__buttons">
+          <div class="calc__percent">
+            <p class="calc__percent-title">Выплаты процентов</p>
+            <button type="button" class="calc__btn-mounth calc__btn-percent active" value="2">Ежемесячно</button>
+            <button type="button" class="calc__btn-end calc__btn-percent" value="1">В конце срока</button>
+          </div>
+          <div class="calc__period">
+            <p class="calc__period-title">Срок вклада</p>
+            <button type="button" class="calc__btn-two calc__btn-period active" value="2">2 года</button>
+            <button type="button" class="calc__btn-three calc__btn-period" value="3">3 года</button>
+          </div>
+        </div>
+        <div class="calc__refer">
+          <span>*Расчет по вкладу является предварительным при условии открытия вклада онлайн</span><br>
+          <a href="#">Подробные условия</a>
+        </div>
+      </div>
+      <div class="calc__col-2">
+        <div class="calc__rate">
+          <span class="calc__rate-title">Процентная ставка</span>
+          <span class="calc__rate-value">6,20%</span>
+        </div>
+        <div class="calc__income">
+          <span class="calc__income-title">Доход</span>
+          <span class="calc__income-value">1240 рублей</span>
+        </div>
+        <div class="calc__summ">
+          <span class="calc__summ-title">Сумма в конце срока</span>
+          <span class="calc__summ-value">11 240 руб</span>
+        </div>
+        <button type="button" class="calc__btn-send">Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap-application">
+    <div class="application">
+      <h2 class="application__title">Заявка на открытие вклада</h2>
+      <form id="form" class="application__form">
+        <label>
+          <input type="text" name="surename" class="application__input" placeholder="Фамилия*">
+          <div class="err"></div>
+        </label>
+        <label>
+          <input type="text" name="name" class="application__input" placeholder="Имя*">
+          <div class="err"></div>
+        </label>
+        <label>
+          <input type="text" name="fathername" class="application__input" placeholder="Отчество*">
+          <div class="err"></div>
+        </label>
+        <label>
+          <input type="text" onfocus="(this.type = 'date')" name="birthday" class="application__input" placeholder="Дата рождения*">
+          <div class="err"></div>
+        </label>
+        <label class="application__tel-label"><span class="application__tel-wrap">Телефон</span>
+          <input type="tel" class="application__input" name="tel" id="tel">
+          <div class="err"></div>
+        </label>
+        <div class="application__check-wrap"><input id="check" type="checkbox" name="accept" class="application__check">
+          <label class="check-label" for="check"></label><span class="application__check-span">&nbsp Я подтверждаю согласие на обработку &nbsp</span>
+          <a href="#" class="form__link">персональных данных</a>
+        </div>
+        <button class="application__btn" type="submit">Оставить заявку</button>
+      </form>
+    </div>
+  </div>
+  <script src="js/inputmask.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
